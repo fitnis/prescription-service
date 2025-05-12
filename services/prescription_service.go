@@ -6,11 +6,6 @@ import (
 
 var prescriptions []models.Prescription
 
-func CreatePrescription(p models.Prescription) models.GenericResponse {
-	prescriptions = append(prescriptions, p)
-	return models.GenericResponse{Message: "Prescription created"}
-}
-
 func PrescribeMedication(p models.Prescription) models.GenericResponse {
 	prescriptions = append(prescriptions, p)
 	return models.GenericResponse{Message: "Medication prescribed"}

@@ -10,8 +10,7 @@ func main() {
 
 	p := router.Group("/prescriptions")
 	{
-		p.POST("", handlers.CreatePrescription)
-		p.POST("/prescribe", handlers.PrescribeMedication)
+		handlers.RegisterPrescriptionRoutes(p)
 	}
 
 	router.Run(":8086")
